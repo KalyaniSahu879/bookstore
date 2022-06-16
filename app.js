@@ -5,7 +5,7 @@ const app = express();
 const bookRouter = require('./routes/book-routes')
 
 //middlewares
-
+app.use(express.json())
 app.use("/books" , bookRouter)
 
 mongoose.connect("mongodb+srv://nicky:nicky_123@cluster0.milck.mongodb.net/bookStore?retryWrites=true&w=majority")
